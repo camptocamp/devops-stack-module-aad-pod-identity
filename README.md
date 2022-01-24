@@ -1,0 +1,1 @@
+# devops-stack-module-aad-pod-identity
