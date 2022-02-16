@@ -76,8 +76,8 @@ resource "argocd_application" "this" {
     sync_policy {
       automated = {
         allow_empty = false
-        prune     = true
-        self_heal = true
+        prune       = true
+        self_heal   = true
       }
 
       retry {
