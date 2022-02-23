@@ -6,7 +6,7 @@ A [DevOps Stack](https://devops-stack.io) module to deploy and configure [aad-po
 
 ```hcl
 module "aad-pod-identity" {
-  source = "git::https://github.com/camptocamp/devops-stack-module-aad-pod-identity.git//modules"
+  source = "git::https://github.com/camptocamp/devops-stack-module-aad-pod-identity.git/"
 
   resource_group_name = azurerm_resource_group.default.name
   cluster_name     = var.cluster_name
