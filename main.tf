@@ -4,7 +4,7 @@ data "azurerm_resource_group" "this" {
 
 resource "azurerm_user_assigned_identity" "this" {
   for_each = {
-    for k, v in var.azureidentities :
+    for k, v in var.azure_identities :
     format("%s.%s", v.namespace, v.name) => v
   }
   resource_group_name = data.azurerm_resource_group.this.name
@@ -47,7 +47,7 @@ resource "argocd_project" "this" {
 }
 
 data "utils_deep_merge_yaml" "values" {
-  input = local.all_yaml
+  input = [for i in concat(local.helm_values, var.helm_values) : yamlencode(i)]
 }
 
 resource "argocd_application" "this" {

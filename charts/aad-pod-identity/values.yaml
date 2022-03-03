@@ -16,3 +16,4 @@ aad-pod-identity:
         memory: "32Mi"
       requests:
         memory: "16Mi"
+  azureIdentities:

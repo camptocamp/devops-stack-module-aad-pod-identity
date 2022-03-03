@@ -19,16 +19,17 @@ variable "namespace" {
   default = "aad-pod-identity"
 }
 
-variable "profiles" {
-  type    = list(string)
-  default = ["default"]
+variable "helm_values" {
+  description = "Helm values, passed as a list of HCL structures."
+  type        = any
+  default     = []
 }
 
 #######################
 ## Module variables
 #######################
 
-variable "azureidentities" {
+variable "azure_identities" {
   description = "Azure User Assigned Identities to create"
   type = list(object({
     namespace = string
