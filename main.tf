@@ -26,13 +26,8 @@ resource "argocd_project" "this" {
     source_repos = ["https://github.com/camptocamp/devops-stack-module-aad-pod-identity.git"]
 
     destination {
-      name      = "in-cluster"
-      namespace = var.namespace
-    }
-
-    destination {
-      name      = "in-cluster"
-      namespace = "kube-system"
+      server = "*"
+      namespace = "*"
     }
 
     orphaned_resources {
@@ -83,8 +78,11 @@ resource "argocd_application" "this" {
       }
 
       retry {
-        backoff = {}
-        limit   = "0"
+        backoff = {
+          duration     = ""
+          max_duration = ""
+        }
+        limit = "0"
       }
 
       sync_options = [

@@ -12,12 +12,12 @@ locals {
 
   helm_values = [{
     aad-pod-identity = {
-      azureIdentity = { for k, v in local.azure_identities :
+      azureIdentities = { for k, v in local.azure_identities :
         k => {
           name       = v.name
           namespace  = v.namespace
           resourceID = v.resource_id
-          cliendID   = v.client_id
+          clientID   = v.client_id
           type       = 0
           binding = {
             name     = v.name
