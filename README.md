@@ -1,6 +1,7 @@
 # devops-stack-module-aad-pod-identity
 
-A [DevOps Stack](https://devops-stack.io) module to deploy and configure [aad-pod-identity](https://azure.github.io/aad-pod-identity/docs/) for AKS.
+A [DevOps Stack](https://devops-stack.io) module to deploy and configure
+[aad-pod-identity](https://azure.github.io/aad-pod-identity/docs/) for AKS.
 
 ## Usage
 
@@ -38,18 +39,25 @@ module "aad-pod-identity" {
 
 ```
 
-## Tests
-
-Two basic tests are documented here:
-
-1. HCL helm values extrapolation using the `terraform console` 
-   and `test.tfvars` (before running terraform apply)
-2. Kubernetes resources creation using a `terraform apply` and **Usage**
-   example from above
-
-### Terraform console
+After applying the configuration we should be able to retrive k8s resources:
 
 ```bash
+>> kubectl get AzureIdentity -A
+
+NAMESPACE                NAME                               AGE
+test                     my-id                              106d
+
+```
+
+## Unittest
+
+You can run a HCL helm values extrapolation using the `terraform console`
+and `test.tfvars` using the module source code.
+
+```bash
+>> git clone https://github.com/camptocamp/devops-stack-module-aad-pod-identity
+>> cd devops-stack-module-aad-pod-identity
+
 >> terraform console -var-file=test.tfvars
 > local.helm_values
 [
@@ -72,16 +80,3 @@ Two basic tests are documented here:
   },
 ]
 ```
-
-### Terraform apply
-
-After applying example described in **Usage** we should be able to retrive:
-
-```bash
->> kubectl get AzureIdentity -A
-
-NAMESPACE                NAME                               AGE
-test                     my-id                              106d
-
-```
-
