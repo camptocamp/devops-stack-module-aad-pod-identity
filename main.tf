@@ -26,7 +26,7 @@ resource "argocd_project" "this" {
     source_repos = ["https://github.com/camptocamp/devops-stack-module-aad-pod-identity.git"]
 
     destination {
-      server = "*"
+      server    = "*"
       namespace = "*"
     }
 
