@@ -1,3 +1,7 @@
+resource "null_resource" "dependencies" {
+  triggers = var.dependency_ids
+}
+
 data "azurerm_resource_group" "this" {
   name = var.resource_group_name
 }
@@ -90,4 +94,14 @@ resource "argocd_application" "this" {
       ]
     }
   }
+
+  depends_on = [
+    resource.null_resource.dependencies,
+  ]
+}
+
+resource "null_resource" "this" {
+  depends_on = [
+    resource.argocd_application.this,
+  ]
 }
