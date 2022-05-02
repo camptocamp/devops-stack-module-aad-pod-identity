@@ -1,3 +1,7 @@
+output "id" {
+  value = resource.null_resource.this.id
+}
+
 output "azure_identities" {
   description = "Azure User Assigned Identities created"
   value       = local.azure_identities
