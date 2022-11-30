@@ -3,7 +3,21 @@ resource "null_resource" "dependencies" {
 }
 
 data "azurerm_resource_group" "this" {
-  name = var.resource_group_name
+  name = var.node_resource_group_name
+}
+
+data "azurerm_subscription" "primary" {}
+
+resource "azurerm_role_assignment" "managed_identity_operator" {
+  scope                = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, data.azurerm_resource_group.this.name)
+  role_definition_name = "Managed Identity Operator"
+  principal_id         = var.cluster_managed_identity
+}
+
+resource "azurerm_role_assignment" "virtual_machine_contributor" {
+  scope                = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, data.azurerm_resource_group.this.name)
+  role_definition_name = "Virtual Machine Contributor"
+  principal_id         = var.cluster_managed_identity
 }
 
 resource "azurerm_user_assigned_identity" "this" {

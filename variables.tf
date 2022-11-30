@@ -50,7 +50,12 @@ variable "azure_identities" {
   default = []
 }
 
-variable "resource_group_name" {
-  description = "The Resource Group where the Managed Kubernetes Cluster should exist."
+variable "node_resource_group_name" {
+  description = "The Resource Group of the node pools."
   type        = string
+}
+
+variable "cluster_managed_identity" {
+  description = "ID of the cluster managed identity"
+  type = string
 }
