@@ -14,6 +14,12 @@ variable "argocd_namespace" {
   type = string
 }
 
+variable "target_revision" {
+  description = "Override of target revision of the application chart."
+  type        = string
+  default     = "main"
+}
+
 variable "namespace" {
   type    = string
   default = "aad-pod-identity"
