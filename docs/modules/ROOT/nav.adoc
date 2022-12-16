@@ -1,0 +1,2 @@
+* xref:ROOT:README.adoc[Home]
+* xref:ROOT:ROOT:index.adoc[_Return to DevOps Stack docs_]
