@@ -1,0 +1,7 @@
+---
+name: "aadpodidentity"
+title: "AAD Pod Identity"
+version: true
+start_page: README.adoc
+nav:
+  - "modules/ROOT/nav.adoc"
