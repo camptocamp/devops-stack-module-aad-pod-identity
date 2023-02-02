@@ -42,7 +42,7 @@ variable "dependency_ids" {
 #######################
 
 variable "azure_identities" {
-  description = "Azure User Assigned Identities to create"
+  description = "Azure User Assigned Identities to create."
   type = list(object({
     namespace = string
     name      = string
@@ -51,8 +51,13 @@ variable "azure_identities" {
 }
 
 variable "node_resource_group_name" {
-  description = "The Resource Group of the node pools."
+  description = "The Resource Group of the node pools. It will be used for new Managed Identities."
   type        = string
+}
+
+variable "managed_identity_resource_groups" {
+  description = "The Resource Groups where this component operates managed identities."
+  type        = list(string)
 }
 
 variable "cluster_managed_identity" {
