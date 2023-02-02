@@ -62,9 +62,15 @@ Description: n/a
 
 Type: `string`
 
+==== [[input_managed_identity_resource_groups]] <<input_managed_identity_resource_groups,managed_identity_resource_groups>>
+
+Description: The Resource Groups where this component operates managed identities.
+
+Type: `list(string)`
+
 ==== [[input_node_resource_group_name]] <<input_node_resource_group_name,node_resource_group_name>>
 
-Description: The Resource Group of the node pools.
+Description: The Resource Group of the node pools. It will be used for new Managed Identities.
 
 Type: `string`
 
@@ -74,7 +80,7 @@ The following input variables are optional (have default values):
 
 ==== [[input_azure_identities]] <<input_azure_identities,azure_identities>>
 
-Description: Azure User Assigned Identities to create
+Description: Azure User Assigned Identities to create.
 
 Type:
 [source,hcl]
@@ -178,7 +184,7 @@ Description: n/a
 |yes
 
 |[[input_azure_identities]] <<input_azure_identities,azure_identities>>
-|Azure User Assigned Identities to create
+|Azure User Assigned Identities to create.
 |
 
 [source]
@@ -222,6 +228,12 @@ list(object({
 |`[]`
 |no
 
+|[[input_managed_identity_resource_groups]] <<input_managed_identity_resource_groups,managed_identity_resource_groups>>
+|The Resource Groups where this component operates managed identities.
+|`list(string)`
+|n/a
+|yes
+
 |[[input_namespace]] <<input_namespace,namespace>>
 |n/a
 |`string`
@@ -229,7 +241,7 @@ list(object({
 |no
 
 |[[input_node_resource_group_name]] <<input_node_resource_group_name,node_resource_group_name>>
-|The Resource Group of the node pools.
+|The Resource Group of the node pools. It will be used for new Managed Identities.
 |`string`
 |n/a
 |yes
