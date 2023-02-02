@@ -62,5 +62,5 @@ variable "managed_identity_resource_groups" {
 
 variable "cluster_managed_identity" {
   description = "ID of the cluster managed identity"
-  type = string
+  type        = string
 }
