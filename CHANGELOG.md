@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v1.0.0...v1.1.0) (2023-03-23)
+
+
+### Features
+
+* expose var for argocd autosync ([#11](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/issues/11)) ([72ecafe](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/commit/72ecafe7bf1b808ccac41315788a160e9d11f5bf))
+
 ## 1.0.0 (2023-02-02)
 
 
