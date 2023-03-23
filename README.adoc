@@ -1,7 +1,5 @@
 // BEGIN_TF_DOCS
-=== Requirements
 
-No requirements.
 
 === Providers
 
@@ -14,10 +12,6 @@ The following providers are used by this module:
 - [[provider_null]] <<provider_null,null>>
 
 - [[provider_utils]] <<provider_utils,utils>>
-
-=== Modules
-
-No modules.
 
 === Resources
 
@@ -77,6 +71,30 @@ Type: `string`
 === Optional Inputs
 
 The following input variables are optional (have default values):
+
+==== [[input_app_autosync]] <<input_app_autosync,app_autosync>>
+
+Description: Automated sync options for the Argo CD Application resource.
+
+Type:
+[source,hcl]
+----
+object({
+    allow_empty = optional(bool)
+    prune       = optional(bool)
+    self_heal   = optional(bool)
+  })
+----
+
+Default:
+[source,json]
+----
+{
+  "allow_empty": false,
+  "prune": true,
+  "self_heal": true
+}
+----
 
 ==== [[input_azure_identities]] <<input_azure_identities,azure_identities>>
 
@@ -177,6 +195,32 @@ Description: n/a
 [cols="a,a,a,a,a",options="header,autowidth"]
 |===
 |Name |Description |Type |Default |Required
+|[[input_app_autosync]] <<input_app_autosync,app_autosync>>
+|Automated sync options for the Argo CD Application resource.
+|
+
+[source]
+----
+object({
+    allow_empty = optional(bool)
+    prune       = optional(bool)
+    self_heal   = optional(bool)
+  })
+----
+
+|
+
+[source]
+----
+{
+  "allow_empty": false,
+  "prune": true,
+  "self_heal": true
+}
+----
+
+|no
+
 |[[input_argocd_namespace]] <<input_argocd_namespace,argocd_namespace>>
 |n/a
 |`string`
