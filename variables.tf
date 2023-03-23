@@ -17,7 +17,7 @@ variable "argocd_namespace" {
 variable "target_revision" {
   description = "Override of target revision of the application chart."
   type        = string
-  default     = "main"
+  default     = "v1.1.0" # x-release-please-version
 }
 
 variable "namespace" {
