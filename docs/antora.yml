@@ -1,6 +1,6 @@
 ---
-name: "aadpodidentity"
-title: "AAD Pod Identity"
+name: "aad-pod-identity"
+title: "AAD Pod Identity Module"
 version: true
 start_page: README.adoc
 nav:
