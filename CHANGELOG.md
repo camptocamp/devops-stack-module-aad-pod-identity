@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.1.2](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v1.1.1...v2.1.2) (2023-03-24)
+## [1.1.2](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v1.1.1...v1.1.2) (2023-03-24)
 
 
 ### Documentation
