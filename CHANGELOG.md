@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v1.1.1...v2.1.2) (2023-03-24)
+
+
+### Documentation
+
+* change module title, add repo link and PR template ([#15](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/issues/15)) ([943ac1e](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/commit/943ac1e06705560e929217fe17a8a1bd1dfef84f))
+
 ## [1.1.1](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v1.1.0...v1.1.1) (2023-03-23)
 
 
