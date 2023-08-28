@@ -167,10 +167,10 @@ Description: Helm values applied to the module's chart
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
+|[[provider_null]] <<provider_null,null>> |n/a
 |[[provider_azurerm]] <<provider_azurerm,azurerm>> |n/a
 |[[provider_utils]] <<provider_utils,utils>> |n/a
 |[[provider_argocd]] <<provider_argocd,argocd>> |n/a
-|[[provider_null]] <<provider_null,null>> |n/a
 |===
 
 = Resources
