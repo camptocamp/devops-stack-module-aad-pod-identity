@@ -5,13 +5,13 @@
 
 The following providers are used by this module:
 
+- [[provider_null]] <<provider_null,null>>
+
 - [[provider_azurerm]] <<provider_azurerm,azurerm>>
 
 - [[provider_utils]] <<provider_utils,utils>>
 
 - [[provider_argocd]] <<provider_argocd,argocd>>
-
-- [[provider_null]] <<provider_null,null>>
 
 === Resources
 
