@@ -11,15 +11,17 @@ data "azurerm_subscription" "primary" {}
 resource "azurerm_role_assignment" "managed_identity_operator" {
   for_each = toset(var.managed_identity_resource_groups)
 
-  scope                = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, each.key)
-  role_definition_name = "Managed Identity Operator"
-  principal_id         = var.cluster_managed_identity
+  scope                            = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, each.key)
+  role_definition_name             = "Managed Identity Operator"
+  principal_id                     = var.cluster_managed_identity
+  skip_service_principal_aad_check = false
 }
 
 resource "azurerm_role_assignment" "virtual_machine_contributor" {
-  scope                = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, data.azurerm_resource_group.this.name)
-  role_definition_name = "Virtual Machine Contributor"
-  principal_id         = var.cluster_managed_identity
+  scope                            = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, data.azurerm_resource_group.this.name)
+  role_definition_name             = "Virtual Machine Contributor"
+  principal_id                     = var.cluster_managed_identity
+  skip_service_principal_aad_check = false
 }
 
 resource "azurerm_user_assigned_identity" "this" {
