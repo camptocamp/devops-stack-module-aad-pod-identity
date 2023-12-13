@@ -11,7 +11,7 @@ data "azurerm_subscription" "primary" {}
 resource "azurerm_role_assignment" "managed_identity_operator" {
   for_each = toset(var.managed_identity_resource_groups)
 
-  scope                = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, each.key)
+  scope                = format("%s/resourceGroups/%s", data.azurerm_subscription.primary.id, each.key)
   role_definition_name = "Managed Identity Operator"
   principal_id         = var.cluster_managed_identity
 }
