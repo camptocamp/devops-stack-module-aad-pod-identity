@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v3.0.1...v3.0.2) (2023-12-13)
+
+
+### Bug Fixes
+
+* **role assignment:** typo which creates idempotentcy issues ([f274fe3](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/commit/f274fe3a39d773c9de1b99cbacb2f7f7232649c2))
+
 ## [3.0.1](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v3.0.0...v3.0.1) (2023-12-13)
 
 
