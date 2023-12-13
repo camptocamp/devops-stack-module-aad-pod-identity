@@ -17,7 +17,7 @@ resource "azurerm_role_assignment" "managed_identity_operator" {
 }
 
 resource "azurerm_role_assignment" "virtual_machine_contributor" {
-  scope                = format("%s/resourcegroups/%s", data.azurerm_subscription.primary.id, data.azurerm_resource_group.this.name)
+  scope                = format("%s/resourceGroups/%s", data.azurerm_subscription.primary.id, data.azurerm_resource_group.this.name)
   role_definition_name = "Virtual Machine Contributor"
   principal_id         = var.cluster_managed_identity
 }
