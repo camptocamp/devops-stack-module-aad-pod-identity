@@ -1,7 +1,8 @@
 terraform {
   required_providers {
     argocd = {
-      source = "oboukili/argocd"
+      source  = "argoproj-labs/argocd"
+      version = ">= 6"
     }
     utils = {
       source = "cloudposse/utils"
