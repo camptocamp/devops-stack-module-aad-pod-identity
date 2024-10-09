@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v3.0.2...v3.0.3) (2024-10-09)
+
+
+### Bug Fixes
+
+* **aad:** updated the provider for the aad module bcs it's still used in the plateform ([#24](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/issues/24)) ([1cd4337](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/commit/1cd4337533de46f08a319b272ac4957db585888c))
+
 ## [3.0.2](https://github.com/camptocamp/devops-stack-module-aad-pod-identity/compare/v3.0.1...v3.0.2) (2023-12-13)
 
 
